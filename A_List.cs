@@ -18,17 +18,26 @@
 
         public bool TryAdd(string userName)
         {
-            if (ContainsS(userName))
+            int count = 0;
+            for (int words; words = 10; word++)
             {
-                list.Add(userName);
-                ListChanged?.Invoke(userName);
-                Add(userName);
-                return true;
-            }
+                if (ContainsS(userName))
+                {
+                    count++;
 
-            else 
-            {
-                Console.WriteLine("The word does not meet the requirements");
+                    if (count >= 3)
+                    {
+                        list.Add(userName);
+                        ListChanged?.Invoke(userName);
+                        Add(userName);
+                        return true;
+                    }
+                }
+
+                else
+                {
+                    Console.WriteLine("The word does not meet the requirements");
+                }
 
                 return false;
             }
