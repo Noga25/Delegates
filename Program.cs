@@ -6,8 +6,17 @@
         {
             A_List A_List = new A_List();
 
-            A_List.TryAdd("Server");
+            //The 10 iteams
+            A_List.TryAdd("se");
             A_List.TryAdd("1");
+            A_List.TryAdd("se");
+            A_List.TryAdd("se");
+            A_List.TryAdd("se");
+            A_List.TryAdd("se");
+            A_List.TryAdd("se");
+            A_List.TryAdd("se");
+            A_List.TryAdd("se");
+            A_List.TryAdd("se");
         }
     }
 }

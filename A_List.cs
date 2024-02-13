@@ -6,6 +6,11 @@
         public event Action<string> ListChanged;
         private Predicate<string> _Predicate;
 
+        public static bool ContainsS(string userName)
+        {
+            return userName.Contains("s");
+        }
+
         public void Observable_Limited_List(Predicate<string> predicate)
         {
             _Predicate = predicate;
@@ -13,9 +18,7 @@
 
         public bool TryAdd(string userName)
         {
-            //_predicate.invoke("S")
-
-            if (userName.StartsWith("S"))
+            if (ContainsS(userName))
             {
                 list.Add(userName);
                 ListChanged?.Invoke(userName);
